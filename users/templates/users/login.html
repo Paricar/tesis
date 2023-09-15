@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+  
+    <div class="container">
+      
+      <div class="form-section">
+        <form id="login-form" method="POST" novalidate>
+            {% csrf_token %}
+
+            {{form.as_p}}
+
+          <input class="btn btn-primary cta" type="submit" value="Login" />
+        </form>
+      </div>
+    </div>
+  
+{% endblock content %}
